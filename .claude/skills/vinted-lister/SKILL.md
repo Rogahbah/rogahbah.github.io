@@ -30,10 +30,38 @@ If something important is unclear (size, brand, flaws a photo might hide), ask t
 
 - **Title** (max ~60 characters): Brand + item + key detail + size. Example: `Nike Air Max 90 white/grey sneakers EU 42`.
 - **Description** (English, plain, 3-6 short lines): what it is, size and fit, condition with any flaws named honestly, material if known. End with `Smoke-free home. Ships fast.` only if the user has confirmed that is true. No hashtags, no emoji, no all-caps.
-- **Price**: suggest a price in EUR based on brand, item and condition, and state your reasoning in one line (e.g. "used Nike Air Max in very good condition usually sells for €35-50 on Vinted NL"). The user decides the final price.
+- **Price**: work it out with the price check below. Don't put a price in the draft from memory alone.
 - **Parcel size**: Small (most clothing, light items), Medium (shoes in a box, jackets, jeans in bulk), Large (heavy coats, boots in a box).
 
-Show the full draft to the user and wait for their OK or changes. Do not open the browser until they agree to the draft and the price.
+### Price check
+
+Use the browser (see step 3 for which tool) to search Vinted before you suggest a price. Only search and read; don't click anything on a listing.
+
+1. Open `https://www.vinted.nl/catalog` in a new tab and search for the brand and model (e.g. `Nike Air Max 90`). Filter by the same category and, where possible, the same or a close size and the same condition.
+2. Pick 5-10 listings that really compare: same brand, same or a very similar model, similar condition. Skip listings that are clearly overpriced or underpriced outliers, and skip "new with tags" listings if the item is worn (and the other way round).
+3. Note each one's price (the item price, not including buyer protection or shipping).
+4. Suggest two prices:
+   - **Recommended**: around the middle (median) of the comparables.
+   - **Quick sale**: about 10-20% below that.
+   Buyers on Vinted often offer lower, so mention that the recommended price leaves some room to accept an offer.
+5. If you find fewer than 3 good comparables, say so, widen the search (similar models from the same brand, any size), and mark the price as a rough estimate.
+
+These are asking prices of items still for sale, not sold prices. Say so when you present them.
+
+Present the price like this and **ask the user to confirm or give their own price**:
+
+```
+Price suggestion for <title>
+Recommended: €<x>   Quick sale: €<y>
+Based on <n> similar listings on Vinted NL (asking prices):
+- <title> · <size> · <condition> · €<price>
+- ...
+Confirm €<x>, €<y>, or tell me your price.
+```
+
+Use only the price the user confirms. Never list an item at a price they haven't approved.
+
+Show the full draft (with the confirmed price) to the user and wait for their OK or changes. Don't open the "Sell an item" form until they agree to the draft and the price.
 
 ## 3. Fill in Vinted in the user's browser
 
