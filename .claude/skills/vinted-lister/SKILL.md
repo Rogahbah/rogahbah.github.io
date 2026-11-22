@@ -52,3 +52,30 @@ Go at a normal human pace and list one item at a time. Don't bulk-post, don't re
 After the user confirms it's live, add a line to `vinted-listings.md` in the project root (create it if it doesn't exist):
 
 `| date | title | size | condition | price € | status |`
+
+## 5. Check for sales and offers
+
+Use this section when a scheduled check runs, or when the user asks "check Vinted". It needs the browser on the user's computer, as in step 3. Open `https://www.vinted.nl/inbox` and the notifications bell in a new tab. Read them, and act only as described below.
+
+Keep a record in `vinted-state.md` in the project root (create it if it doesn't exist) of every sale and offer you have already reported, by item title and date. That way the same sale or offer is never reported twice.
+
+### When an item has sold
+
+1. Notify the user (push notification): `Sold: <title> for €<price> to <buyer>. Shipping code ready.` (or `...ship by <date>` if Vinted shows a deadline).
+2. Open the sale's conversation and get the shipping label:
+   - If Vinted offers a choice, **always choose the digital code** (QR code / "no printer needed" / "zonder printer") instead of a label to print.
+   - Download the QR code or label and save it on the user's computer as `Vinted shipping/<date> <title>.png` (or `.pdf`). Tell the user where it is and which carrier and drop-off it is for.
+   - If the buyer's chosen carrier only gives a printable label, say so and save the PDF.
+3. Update `vinted-listings.md`: set the item's status to `sold`.
+
+### When a buyer makes an offer or asks for a lower price
+
+1. Never accept, decline or counter on your own.
+2. Notify the user (push notification): `Offer on <title>: €<offer> (listed €<price>). Reply yes or no.` If the buyer asked in a message instead of a formal offer, quote their question in a few words.
+3. Wait for the user's answer, then do exactly that in the conversation:
+   - **yes**: accept the offer (or, for a message, reply that the price is fine and send an offer at that price if Vinted allows it).
+   - **no**: decline the offer, with a short polite message in English: `Thanks for your offer, but I'm keeping the price at €<price>.`
+   - If the user gives a different price, send that as a counter-offer.
+4. Record the result in `vinted-state.md`.
+
+Don't answer other buyer messages yourself. Report them to the user in one line each.
